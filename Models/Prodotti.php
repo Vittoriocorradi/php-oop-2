@@ -1,11 +1,23 @@
 <?php
 
+/**
+ * Prodotti
+ */
 class Prodotti{
     private $image;
     private $name;
     private $price;
     private $type;
-
+    
+    /**
+     * __construct
+     *
+     * @param  mixed $_image
+     * @param  mixed $_name
+     * @param  mixed $_price
+     * @param  mixed $_type
+     * @return void
+     */
     public function __construct($_image, $_name, $_price, Categoria $_type)
     {
         $this->image = $_image;
