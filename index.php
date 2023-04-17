@@ -44,8 +44,8 @@ $accessories = array($accessory1, $accessory2);
 <body>
     <div class="container-xxl p-5">
         <h1>Boolshop</h1>
-        <h2>I nostri prodotti</h2>
-        <div class="row">
+        <h2 class="mb-3">I nostri prodotti</h2>
+        <div class="row gx-3">
             <?php foreach ($foods as $food) { ?>
                 <?php require __DIR__ . '/partials/foodCard.php'; ?>
             <?php } ?>
