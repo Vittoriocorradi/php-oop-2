@@ -6,10 +6,15 @@ require_once __DIR__ . '/Models/Cibo.php';
 require_once __DIR__ . '/Models/Giochi.php';
 require_once __DIR__ . '/Models/Accessori.php';
 
-$food = new Cibo('url immagine', 'Royal Canin', 43.99, $dog, 545, ['prosciutto', 'riso']);
+$food1 = new Cibo('url immagine', 'Royal Canin', 43.99, $dog, 545, ['prosciutto', 'riso']);
+$food2 = new Cibo('url immagine', 'Almo Nature', 44.99, $dog, 600, ['manzo', 'cereali']);
+$food3 = new Cibo('url immagine', 'Almo Nature Cat', 34.99, $cat, 400, ['tonno', 'pollo', 'prosciutto']);
+$food4 = new Cibo('url immagine', 'Mangime per pesci', 2.95, $fish, 30, ['pesci e sottoprodotti dei pesci', 'cereali', 'lieviti', 'alghe']);
 $toy = new Giochi('url immagine', 'Topini di peluche', 4.99, $cat, 'morbido con codina in corda', [8.5, 10]);
 $accessory = new Accessori('url immagine', 'cartucce filtranti', 2.29, $fish, 'Materiale espanso', []);
 
+$foods = array($food1, $food2, $food3, $food4);
+// var_dump($foods);
 // var_dump($food);
 // var_dump($toy);
 // var_dump($accessory);
@@ -18,6 +23,7 @@ $accessory = new Accessori('url immagine', 'cartucce filtranti', 2.29, $fish, 'M
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,24 +36,17 @@ $accessory = new Accessori('url immagine', 'cartucce filtranti', 2.29, $fish, 'M
 
     <title>Boolshop</title>
 </head>
+
 <body>
     <div class="container-xxl p-5">
         <h1>Boolshop</h1>
         <h2>I nostri prodotti</h2>
         <div class="row">
-            <div class="col-4 blue">
-                <div class="img">
-                    <img src="<?php echo $food->getImage(); ?>" alt="<?php echo $food->name; ?>">
-                </div>
-                <h3><?php echo $food->name; ?></h3>
-                <ul>
-                    <li><?php echo $food->type->type ?></li>
-                    <li><?php echo $food->getPrice(); ?></li>
-                    <li><?php echo $food->weight; ?></li>
-                    <li><?php echo implode(',',$food->ingredients); ?></li>
-                </ul>
-            </div>
+            <?php foreach ($foods as $food) { ?>
+                <?php require __DIR__ . '/partials/foodCard.php'; ?>
+            <?php } ?>
         </div>
     </div>
 </body>
+
 </html>
