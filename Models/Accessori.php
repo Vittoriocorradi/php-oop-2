@@ -4,7 +4,7 @@
  * Accessori
  */
 class Accessori extends Prodotti{
-    private $materials;
+    public $materials;
     private $size;
     
     /**

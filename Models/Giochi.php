@@ -4,8 +4,8 @@
  * Giochi
  */
 class Giochi extends Prodotti{
-    private $feature;
-    private $dimensions;
+    public $feature;
+    public $dimensions;
     
     /**
      * __construct

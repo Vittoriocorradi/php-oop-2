@@ -4,8 +4,8 @@
  * Cibo
  */
 class Cibo extends Prodotti{
-    private $weight;
-    private $ingredients;
+    public $weight;
+    public $ingredients;
     
     /**
      * __construct
