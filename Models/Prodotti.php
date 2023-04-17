@@ -14,7 +14,3 @@ class Prodotti{
         $this->type = $_type;
     }
 }
-
-$dog = new Categoria('Dog');
-
-$prova = new Prodotti('url', 'Cibo per cani', 49.99, $dog);
