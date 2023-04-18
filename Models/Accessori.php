@@ -1,9 +1,14 @@
 <?php
 
+require_once __DIR__ . '/../Traits/Weight.php';
+
 /**
  * Accessori
  */
 class Accessori extends Prodotti{
+
+    use Weight;
+
     public $materials;
     public $size;
     
@@ -18,9 +23,10 @@ class Accessori extends Prodotti{
      * @param  mixed $_size
      * @return void
      */
-    public function __construct($_image, $_name, $_price, Categoria $_type, $_materials, $_size)
+    public function __construct($_image, $_name, $_price, Categoria $_type, $_weight, $_materials, $_size)
     {
         parent::__construct($_image, $_name, $_price, $_type);
+        $this->setWeight($_weight);
         $this->materials = $_materials;
         $this->size = $_size;
         $this->setNoSize();

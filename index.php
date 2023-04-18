@@ -10,10 +10,10 @@ $food1 = new Cibo('url immagine', 'Royal Canin', 43.99, $dog, 545, ['prosciutto'
 $food2 = new Cibo('url immagine', 'Almo Nature', 44.99, $dog, 600, ['manzo', 'cereali']);
 $food3 = new Cibo('url immagine', 'Almo Nature Cat', 34.99, $cat, 400, ['tonno', 'pollo', 'prosciutto']);
 $food4 = new Cibo('url immagine', 'Mangime per pesci', 2.95, $fish, 30, ['pesci e sottoprodotti dei pesci', 'cereali', 'lieviti', 'alghe']);
-$accessory1 = new Accessori('url immagine', 'Voliera Wilma', 184.99, $bird, 'Legno', [83, 67, 153]);
-$accessory2 = new Accessori('url immagine', 'cartucce filtranti', 2.29, $fish, 'Materiale espanso', []);
-$toy1 = new Giochi('url immagine', 'Kong classic', 13.49, $dog, 'galleggia e rimbalza', [8.5, 10]);
-$toy2 = new Giochi('url immagine', 'Topini di peluche', 4.99, $cat, 'morbido con codina in corda', [8.5, 10]);
+$accessory1 = new Accessori('url immagine', 'Voliera Wilma', 184.99, $bird, 15500, 'Legno', [83, 67, 153]);
+$accessory2 = new Accessori('url immagine', 'cartucce filtranti', 2.29, $fish, 600, 'Materiale espanso', []);
+$toy1 = new Giochi('url immagine', 'Kong classic', 13.49, $dog, 150, 'galleggia e rimbalza', [8.5, 10]);
+$toy2 = new Giochi('url immagine', 'Topini di peluche', 4.99, $cat, 90, 'morbido con codina in corda', [8.5, 10]);
 
 $foods = array($food1, $food2, $food3, $food4);
 $toys = array($toy1, $toy2);

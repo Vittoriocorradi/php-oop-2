@@ -4,7 +4,7 @@
  * Categoria
  */
 class Categoria{
-    public $type;
+    private $type;
     
     /**
      * __construct
@@ -15,6 +15,10 @@ class Categoria{
     public function __construct($_type)
     {
         $this->type = $_type;
+    }
+
+    public function getType() {
+        return $this->type;
     }
 }
 

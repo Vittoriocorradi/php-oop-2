@@ -1,11 +1,15 @@
 <?php
 
+require_once __DIR__ . '/../Traits/Weight.php';
+
 /**
  * Cibo
  */
 class Cibo extends Prodotti{
-    public $weight;
-    public $ingredients;
+
+    use Weight;
+
+    private $ingredients;
     
     /**
      * __construct
@@ -21,7 +25,11 @@ class Cibo extends Prodotti{
     public function __construct($_image, $_name, $_price, Categoria $_type, $_weight, $_ingredients)
     {
         parent::__construct($_image, $_name, $_price, $_type);
-        $this->weight = $_weight;
+        $this->setWeight($_weight);
         $this->ingredients = $_ingredients;
+    }
+
+    public function getIngredients() {
+        return $this->ingredients;
     }
 }

@@ -5,9 +5,9 @@
  */
 class Prodotti{
     private $image;
-    public $name;
+    private $name;
     private $price;
-    public $type;
+    private $type;
     
     /**
      * __construct
@@ -30,7 +30,15 @@ class Prodotti{
         return $this->image;
     }
 
+    public function getName() {
+        return $this->name;
+    }
+
     public function getPrice() {
         return $this->price;
+    }
+
+    public function getType() {
+        return $this->type;
     }
 }
