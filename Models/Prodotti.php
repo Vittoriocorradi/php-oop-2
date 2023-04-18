@@ -22,7 +22,7 @@ class Prodotti{
     {
         $this->image = $_image;
         $this->name = $_name;
-        $this->price = $_price;
+        $this->setPrice($_price);
         $this->type = $_type;
     }
 
@@ -32,6 +32,13 @@ class Prodotti{
 
     public function getName() {
         return $this->name;
+    }
+
+    public function setPrice($_price) {
+        if ($_price < 0) {
+            throw new Exception('Non puoi vendere a prezzo negativo');
+        }
+        $this->price = "Prezzo: {$_price}€"; 
     }
 
     public function getPrice() {
