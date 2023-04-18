@@ -27,19 +27,32 @@ class Accessori extends Prodotti{
     {
         parent::__construct($_image, $_name, $_price, $_type);
         $this->setWeight($_weight);
-        $this->materials = $_materials;
-        $this->size = $_size;
-        $this->setNoSize();
+        $this->setMaterials($_materials);
+        $this->setSize($_size);
     }
     
     /**
-     * setNoSize               Funzione restituisce 'ND' nel caso non fossero presenti dimensioni
+     * setMaterials
+     *
+     * @param  mixed $_materials
+     * @return void
+     */
+    public function setMaterials($_materials) {
+        $this->materials = "Materiale: {$_materials}";
+    }
+    
+    /**
+     * setNoSize   
+     * 
+     * Funzione restituisce 'ND' nel caso non fossero presenti dimensioni tre dimensioni            
      *
      * @return void
      */
-    public function setNoSize() {
-        if ($this->size === []) {
+    public function setSize($_size) {
+        if (count($_size) !== 3) {
             $this->size = 'ND';
+        } else {
+            $this->size = "Dimensioni: L {$_size[0]} - P {$_size[1]} - H {$_size[2]} cm";
         }
     }
 }

@@ -12,10 +12,10 @@ class Prodotti{
     /**
      * __construct
      *
-     * @param  mixed $_image
-     * @param  mixed $_name
-     * @param  mixed $_price
-     * @param  mixed $_type
+     * @param  string $_image
+     * @param  string $_name
+     * @param  float $_price
+     * @param  Categoria $_type
      * @return void
      */
     public function __construct($_image, $_name, $_price, Categoria $_type)
@@ -33,7 +33,15 @@ class Prodotti{
     public function getName() {
         return $this->name;
     }
-
+    
+    /**
+     * setPrice
+     * 
+     * Restituisci un errore se il prezzo è uguale o inferiore a 0.
+     *
+     * @param  mixed $_price
+     * @return void
+     */
     public function setPrice($_price) {
         if ($_price < 0) {
             throw new Exception('Non puoi vendere a prezzo negativo');

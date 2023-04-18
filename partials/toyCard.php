@@ -9,7 +9,7 @@
             <li><?php echo $toy->getPrice(); ?></li>
             <li><?php echo $toy->getWeight(); ?></li>
             <li><?php echo $toy->feature; ?></li>
-            <li><?php echo implode(',', $toy->dimensions); ?></li>
+            <li><?php echo $toy->dimensions; ?></li>
         </ul>
     </div>
 </div>

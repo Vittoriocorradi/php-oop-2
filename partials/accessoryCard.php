@@ -13,7 +13,8 @@
                 <?php if ($accessory->size === 'ND') {
                     echo 'ND';
                 } else {
-                    echo implode(',', $accessory->size);
+                    // echo implode(',', $accessory->size);
+                    echo $accessory->size;
                 }
                 ?>
             </li>

@@ -8,7 +8,7 @@
             <li><?php echo $food->getType()->getType() ?></li>
             <li><?php echo $food->getPrice(); ?></li>
             <li><?php echo $food->getWeight(); ?></li>
-            <li><?php echo implode(', ', $food->getIngredients()); ?></li>
+            <li><?php echo "Ingredienti: " . implode(', ', $food->getIngredients()); ?></li>
         </ul>
     </div>
 </div>
