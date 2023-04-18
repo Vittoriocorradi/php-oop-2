@@ -4,20 +4,12 @@
             <img src="<?php echo $accessory->getImage(); ?>" alt="<?php echo $accessory->getName(); ?>">
         </div>
         <h3><?php echo $accessory->getName(); ?></h3>
-        <ul>
-            <li><?php echo $accessory->getType()->getType() ?></li>
-            <li><?php echo $accessory->getPrice(); ?></li>
-            <li><?php echo $accessory->getWeight(); ?></li>
-            <li><?php echo $accessory->materials; ?></li>
-            <li>
-                <?php if ($accessory->size === 'ND') {
-                    echo 'ND';
-                } else {
-                    // echo implode(',', $accessory->size);
-                    echo $accessory->size;
-                }
-                ?>
-            </li>
+        <ul class="list-group">
+            <li class="list-group-item border-0"><?php echo $accessory->getType()->getType() ?></li>
+            <li class="list-group-item border-0"><?php echo $accessory->getPrice(); ?></li>
+            <li class="list-group-item border-0"><?php echo $accessory->getWeight(); ?></li>
+            <li class="list-group-item border-0"><?php echo $accessory->materials; ?></li>
+            <li class="list-group-item border-0"><?php echo $accessory->size; ?></li>
         </ul>
     </div>
 </div>

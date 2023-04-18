@@ -4,12 +4,12 @@
             <img src="<?php echo $toy->getImage(); ?>" alt="<?php echo $toy->getName(); ?>">
         </div>
         <h3><?php echo $toy->getName(); ?></h3>
-        <ul>
-            <li><?php echo $toy->getType()->getType() ?></li>
-            <li><?php echo $toy->getPrice(); ?></li>
-            <li><?php echo $toy->getWeight(); ?></li>
-            <li><?php echo $toy->feature; ?></li>
-            <li><?php echo $toy->dimensions; ?></li>
+        <ul class="list-group">
+            <li class="list-group-item border-0"><?php echo $toy->getType()->getType() ?></li>
+            <li class="list-group-item border-0"><?php echo $toy->getPrice(); ?></li>
+            <li class="list-group-item border-0"><?php echo $toy->getWeight(); ?></li>
+            <li class="list-group-item border-0"><?php echo $toy->feature; ?></li>
+            <li class="list-group-item border-0"><?php echo $toy->dimensions; ?></li>
         </ul>
     </div>
 </div>
